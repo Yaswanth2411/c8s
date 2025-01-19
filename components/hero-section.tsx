@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen bg-[#FFE566] pt-16 flex justify-center items-center">
+    <section className="relative min-h-screen bg-[#FFE566] pt-24 flex justify-center items-center">
       <div className="container grid lg:grid-cols-2 gap-8 items-center py-20">
         <div className="space-y-6">
             <Image

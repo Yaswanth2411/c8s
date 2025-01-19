@@ -29,9 +29,9 @@ export function Footer() {
       <div className="container">
         <div className="grid md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <div className="relative w-12 h-12">
+            <div className="relative w-20 h-12">
               <Image
-                src={isScrolled ? '/Logo white_.png' : '/Logo Black_.png'}
+                src={isScrolled ? "/IMG_9320.PNG" : "/IMG_9319.PNG"}
                 alt="Collbr8 Logo"
                 fill
                 className="object-contain"
@@ -60,16 +60,29 @@ export function Footer() {
                   Services
                 </button>
               </li>
-              <li><Link href="/our-talent">Talent</Link></li>
-              <li><Link href="/news">News</Link></li>
+              <li><button 
+                  onClick={() => scrollToSection('brands')} 
+                  className={`${isScrolled ? 'text-white hover:text-gray-300' : 'text-black hover:text-gray-700'}`}
+                >
+                  Brands
+                </button>
+              </li>
+              <li>
+              <button 
+                  onClick={() => scrollToSection('contact')} 
+                  className={`${isScrolled ? 'text-white hover:text-gray-300' : 'text-black hover:text-gray-700'}`}
+                >
+                  Join Us
+                </button>
+              </li>
             </ul>
           </div>
           <div>
             <h4 className="font-semibold mb-4">Contact</h4>
             <ul className="space-y-2 text-gray-400">
-              <li>info@collabr8.com</li>
-              <li>+1 (555) 123-4567</li>
-              <li>Los Angeles, CA</li>
+              <li>Team@collabr8.in</li>
+              <li>+91 9177323929</li>
+              <li>H.No 12-1-327, Third Floor, Road  No-4,Anand Nagar Colony, Hyderabad,Telangana, 500068.</li>
             </ul>
           </div>
           <div>

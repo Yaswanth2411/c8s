@@ -31,7 +31,7 @@ Message: ${data.message}
     `.trim()
 
     // Your WhatsApp number here
-    const whatsappNumber = "9849953919" // Replace with your actual number
+    const whatsappNumber = "9177323929" // Replace with your actual number
     
     // Open WhatsApp with the pre-filled message
     window.open(

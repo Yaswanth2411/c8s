@@ -28,9 +28,9 @@ export function SiteHeader() {
   return (
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-black' : 'bg-transparent'}`}>
       <div className="container flex h-16 items-center justify-between">
-        <div className="relative w-12 h-12">
+        <div className="relative w-20 h-12">
           <Image
-            src={isScrolled ? "/Logo white_.png" : "/Logo Black_.png"}
+            src={isScrolled ? "/IMG_9320.PNG" : "/IMG_9319.PNG"}
             alt="Collbr8 Logo"
             fill
             className="object-contain"

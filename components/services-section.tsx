@@ -36,9 +36,6 @@ export function ServicesSection() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-gray-600">{service.description}</p>
-                <Button className="w-full bg-black hover:bg-gray-800 text-white">
-                  Let's Collabr8
-                </Button>
               </CardContent>
             </Card>
           ))}

@@ -1,32 +1,36 @@
 {
     "logos": [
       {
-        "src": "/brands/brand1.png",
+        "src": "/brands/samsung.png",
         "alt": "Brand 1"
       },
       {
-        "src": "/brands/brand2.png",
+        "src": "/brands/sony.png",
         "alt": "Brand 2"
       },
       {
-        "src": "/brands/brand3.png",
+        "src": "/brands/oppo.png",
         "alt": "Brand 3"
       },
       {
-        "src": "/brands/brand4.png",
+        "src": "/brands/redmi.png",
         "alt": "Brand 4"
       },
       {
-        "src": "/brands/brand5.png",
+        "src": "/brands/bajaj.png",
         "alt": "Brand 5"
       },
       {
-        "src": "/brands/brand6.png",
+        "src": "/brands/realme.png",
         "alt": "Brand 6"
       },
       {
-        "src": "/brands/brand7.png",
+        "src": "/brands/swiggy.png",
         "alt": "Brand 7"
+      },
+      {
+        "src": "/brands/vivo.png",
+        "alt": "Brand 8"
       }
     ]
   }

@@ -13,12 +13,7 @@ export function AboutSection() {
             <p className="text-xl text-gray-600 leading-relaxed">
               Hey collaborators! in a world where everything is going digital, we're here to help you navigate the social media maze. Led by Mahesh Nandyala and his expert crew, we understand how important collaborations are for both brands and creators. So, whether you're a brand seeking the spotlight or a creator aiming to amplify your voice, Collabr8 is your ultimate partner.
             </p>
-            <div className="text-center">
-              <Button size="lg" className="bg-black hover:bg-gray-800 text-white px-8">
-                Let's Collabr8
-              </Button>
             </div>
-          </div>
 
           <div className="space-y-6">
             <h2 className="text-4xl md:text-5xl font-bold text-center">
@@ -27,11 +22,6 @@ export function AboutSection() {
             <p className="text-xl text-gray-600 leading-relaxed">
               At Collabr8, we're dedicated to making collaborations seamless and impactful. Whether you're a brand ready to shine or a creator seeking to amplify your voice, we've got you covered. From brainstorming innovative ideas to executing flawless campaigns, our team ensures that every collaboration is a success story. With Collabr8, expect excellence in every digital endeavor.
             </p>
-            <div className="text-center">
-              <Button size="lg" className="bg-black hover:bg-gray-800 text-white px-8">
-                Let's Collabr8
-              </Button>
-            </div>
           </div>
         </div>
       </div>

@@ -3,10 +3,13 @@
 import { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { Menu } from 'lucide-react'
+import { MobileMenu } from './mobile-menu'
 
 export function SiteHeader() {
   const [isScrolled, setIsScrolled] = useState(false)
-
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10)
@@ -63,6 +66,9 @@ export function SiteHeader() {
             Join Us
           </Button>
         </nav>
+        <div className="md:hidden">
+          <MobileMenu onNavigate={scrollToSection} isScrolled={isScrolled} />
+        </div>
       </div>
     </header>
   )

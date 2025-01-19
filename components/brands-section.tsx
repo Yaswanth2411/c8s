@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export function BrandsSection() {
   return (
@@ -8,10 +8,10 @@ export function BrandsSection() {
           Brand Associations
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-          {[1, 2, 3, 4, 5, 6, 8].map((i) => (
+          {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
             <div key={i} className="relative w-40 h-40">
               <Image
-                src={`/placeholder.svg?height=160&width=160`}
+                src={`/brands/brand${i}.png`}
                 alt={`Brand logo ${i}`}
                 fill
                 className="object-contain"
@@ -21,6 +21,5 @@ export function BrandsSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

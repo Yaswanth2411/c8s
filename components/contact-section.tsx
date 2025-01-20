@@ -1,60 +1,52 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { PhoneIcon as WhatsappIcon } from 'lucide-react'
 
 export function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const router = useRouter()
   
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
 
-    const formData = new FormData(e.currentTarget)
-    const data = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      phone: formData.get('phone'),
-      message: formData.get('message')
+    try {
+      const response = await fetch("https://formspree.io/f/xqaavgvn", {
+        method: "POST",
+        body: new FormData(e.currentTarget),
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        router.push('/thank-you');
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("There was an error submitting the form. Please try again.");
+    } finally {
+      setIsSubmitting(false);
     }
-
-    // Format the WhatsApp message
-    const whatsappMessage = `
-Name: ${data.name}
-Email: ${data.email}
-Phone: ${data.phone}
-
-Message: ${data.message}
-    `.trim()
-
-    // Your WhatsApp number here
-    const whatsappNumber = "9177323929" // Replace with your actual number
-    
-    // Open WhatsApp with the pre-filled message
-    window.open(
-      `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`,
-      '_blank'
-    )
-
-    // Reset form
-    e.currentTarget.reset()
-    setIsSubmitting(false)
-  }
+  };
 
   return (
     <section id="contact" className="py-24 bg-black text-white flex justify-center items-center">
       <div className="container">
         <div className="max-w-2xl mx-auto text-center space-y-12">
           <div className="space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold">Work With Us</h2>
+            <h2 className="text-4xl md:text-5xl font-bold">Join Us</h2>
             <p className="text-xl text-gray-400">
               Ready to create something amazing? Let's connect!
             </p>
           </div>
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form onSubmit={handleSubmit} className="space-y-6" action="https://formspree.io/f/xqaavgvn" method="POST">
             <div className="grid sm:grid-cols-2 gap-4">
               <Input
                 name="name"
@@ -92,8 +84,7 @@ Message: ${data.message}
               className="w-full"
               disabled={isSubmitting}
             >
-              <WhatsappIcon className="mr-2 h-5 w-5" />
-              Connect on WhatsApp
+              {isSubmitting ? 'Submitting...' : 'Submit'}
             </Button>
           </form>
         </div>

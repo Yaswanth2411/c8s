@@ -1,0 +1,24 @@
+/* Staggered fade-in animation */
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Floating animation */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  /* Gradient overlay effect */
+  .gradient-mask {
+    position: relative;
+  }
+  
+  .gradient-mask::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, #FFE566 20%, transparent 80%);
+    mix-blend-mode: multiply;
+  }

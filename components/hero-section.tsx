@@ -12,34 +12,38 @@ export function HeroSection() {
   }
 
   return (
-    <section className="relative min-h-screen bg-[#FFE566] pt-24 flex justify-center items-center">
-      <div className="container grid lg:grid-cols-2 gap-8 items-center py-20">
-        <div className="space-y-6">
+    <section className="relative min-h-screen bg-[#FFE566] flex justify-center items-center">
+      <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center px-8">
+        {/* Left Content */}
+        <div className="space-y-6 text-center lg:text-left">
           <Image
             src="/IMG_9319.PNG"
-            alt="Collbr8"
-            width={600}
-            height={400}
-            className="object-cover"
+            alt="Collabr8 Logo"
+            width={400}
+            height={100}
+            className="object-contain mx-auto"
             priority
           />
-          <p className="text-2xl md:text-3xl lg:text-4xl">
+          <p className="text-2xl md:text-3xl lg:text-4xl font-bold">
             Bridging Brands and Influencers!
           </p>
           <Button
             size="lg"
-            className="bg-black hover:bg-gray-800 text-white px-8 text-lg"
+            className="bg-black hover:bg-gray-800 text-white px-6 py-3 text-lg rounded-md"
             onClick={() => scrollToSection('contact')}
           >
             Let's Collabr8
           </Button>
         </div>
-        <div className="relative h-[500px] lg:h-[600px]">
+
+        {/* Right Image */}
+        <div className="flex justify-center">
           <Image
-            src="/placeholder.svg?height=600&width=600"
+            src="/banner.jpg"
             alt="Creative collaboration visualization"
-            fill
-            className="object-cover"
+            width={600}
+            height={600}
+            className="rounded-lg shadow-lg"
             priority
           />
         </div>

@@ -3,12 +3,19 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
 export function HeroSection() {
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className="relative min-h-screen bg-[#FFE566] overflow-hidden">
+    <section className="relative min-h-screen bg-white overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 gradient-mask">
         <Image
-          src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1964&auto=format&fit=crop"
+          src="banner.avif"
           alt="Background"
           fill
           className="object-cover animate-float"
@@ -38,12 +45,12 @@ export function HeroSection() {
               <span className="text-6xl font-extrabold">& Influencers</span>
             </h1>
 
-            <Button 
+            <Button
               size="lg"
-              className="bg-black hover:bg-gray-900 text-xl px-8 py-6 animate-slideUp [animation-delay:0.6s]
-                        transform transition-all hover:scale-105 shadow-2xl"
+              className="bg-black hover:bg-gray-800 text-white px-10 py-4 text-xl rounded-full transform transition-all duration-300 hover:scale-105 shadow-lg"
+              onClick={() => scrollToSection('contact')}
             >
-              Let's Collabr8 →
+              Let's Collabr8 
             </Button>
           </div>
 
@@ -51,7 +58,7 @@ export function HeroSection() {
           <div className="relative animate-slideUp [animation-delay:0.8s]">
             <div className="absolute -inset-8 bg-black rounded-3xl transform rotate-3" />
             <Image
-              src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+              src="poster.webp"
               alt="Brands & Influencers"
               width={600}
               height={600}

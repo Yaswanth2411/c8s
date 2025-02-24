@@ -11,7 +11,9 @@ export function HeroSection() {
   };
 
   return (
-    <section className="relative min-h-screen bg-white overflow-hidden">
+    <section id="hero" className="relative min-h-screen bg-white overflow-hidden">
+
+    {/* <section className="relative min-h-screen bg-white overflow-hidden"> */}
       {/* Animated Background */}
       <div className="absolute inset-0 gradient-mask">
         <Image

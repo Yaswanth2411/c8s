@@ -11,7 +11,7 @@ export function HeroSection() {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen bg-yellow-300 overflow-hidden">
+    <section id="hero" className="relative min-h-screen bg-yellow-300 overflow-hidden flex items-center">
       {/* Background with dark shaded circles */}
       <div className="absolute top-0 left-0 w-[120px] h-[120px]">
         <div className="w-96 h-96 bg-black rounded-full opacity-20 absolute top-[-70%] left-[-70%]"></div>
@@ -23,35 +23,38 @@ export function HeroSection() {
 
       {/* Content Container */}
       <div className="container mx-auto px-6 py-32 lg:py-48 flex items-center h-full relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column */}
-          <div className="space-y-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
+          {/* Left Column - Center Aligned Content */}
+          <div className="flex flex-col items-center text-center">
             <div className="animate-slideUp [animation-delay:0.2s]">
               <Image
                 src="IMG_9319.PNG"
                 alt="Collabr8"
-                width={300}
-                height={300}
+                width={400}
+                height={400}
                 className="drop-shadow-lg"
               />
             </div>
 
-            <h1 className="text-4xl font-bold text-black animate-slideUp [animation-delay:0.4s]">
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-800 whitespace-nowrap">
-                Bridge <span className="text-5xl font-extrabold">Brands</span> & <span className="text-5xl font-extrabold">Influencers</span>
-              </span>
-            </h1>
+            {/* Wrapper for text & button to maintain uniform spacing */}
+            <div className="space-y-6 animate-slideUp [animation-delay:0.4s]">
+              <h1 className="text-4xl font-bold text-black">
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-black to-gray-800">
+                  Bridging Brands & Influencers
+                </span>
+              </h1>
 
-            <Button
-              size="lg"
-              className="bg-black hover:bg-gray-800 text-white px-10 py-4 text-xl rounded-full transform transition-all duration-300 hover:scale-105 shadow-lg"
-              onClick={() => scrollToSection('contact')}
-            >
-              Let's Collabr8
-            </Button>
+              <Button
+                size="lg"
+                className="bg-black hover:bg-gray-800 text-white px-10 py-4 text-xl rounded-full transform transition-all duration-300 hover:scale-105 shadow-lg"
+                onClick={() => scrollToSection('contact')}
+              >
+                Let's Collabr8
+              </Button>
+            </div>
           </div>
 
-          {/* Right Column - Image Collage */}
+          {/* Right Column - Image */}
           <div className="relative animate-slideUp [animation-delay:0.8s] z-20">
             <Image
               src="poster.webp"
